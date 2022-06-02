@@ -8,6 +8,7 @@ import { UserModel } from 'src/app/shared/models/user.model';
 })
 export class UserBoxComponent implements OnInit {
   @Input() user!: UserModel;
+  @Input() option!: string;
   constructor() {}
 
   ngOnInit(): void {}

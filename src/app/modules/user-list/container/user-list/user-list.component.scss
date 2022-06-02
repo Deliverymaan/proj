@@ -14,6 +14,8 @@
 
 .params {
   padding: 2.5em 1em 1em 1.5em;
+  display: flex;
+  flex-direction: row;
 }
 
 .left {
@@ -78,6 +80,25 @@
   }
 
   .addFilter:hover {
+    background-color: rgba(218, 218, 218, 0.3);
+  }
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  .add {
+    margin-top: 0.5em;
+    a {
+      background-color: transparent;
+      cursor: pointer;
+      text-align: center;
+      padding: 0.5em 1.5em 0.5em 1.5em;
+      border: 0.5px solid var(--five);
+    }
+  }
+  .add a:hover {
     background-color: rgba(218, 218, 218, 0.3);
   }
 }

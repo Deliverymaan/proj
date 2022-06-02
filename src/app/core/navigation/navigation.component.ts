@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,17 +8,21 @@ import { Router } from '@angular/router';
 })
 export class NavigationComponent implements OnInit {
   constructor(private _router: Router) {}
+  @ViewChild('nav', { static: true }) nav!: ElementRef;
 
-  ngOnInit(): void {}
-
-  onAdd() {
-    this._router.navigate(['/create-user']);
+  ngOnInit(): void {
+    console.log(this.nav);
   }
+
   onEmployee() {
     this._router.navigate(['/users']);
   }
 
   onHome() {
     this._router.navigate(['/home']);
+  }
+
+  onButton() {
+    this.nav.nativeElement.classList.toggle('active');
   }
 }

@@ -1,5 +1,11 @@
-<div class="nav">
-  <h1>TEGETA MOTORS</h1>
+<div class="nav" #nav>
+  <div class="header">
+    <h1>TEGETA MOTORS</h1>
+    <div class="logo">
+      <i class="bx bxs-car-mechanic"></i>
+    </div>
+  </div>
+
   <ul class="list">
     <li>
       <a (click)="onHome()">
@@ -38,16 +44,21 @@
       </a>
     </li>
     <li>
-      <a (click)="onAdd()">
-        <i class="bx bxs-id-card"></i>
-        <span class="list_item">Add Employee</span>
-      </a>
-    </li>
-    <li>
       <a (click)="onHome()">
         <i class="bx bxs-wrench"></i>
         <span class="list_item">Services</span>
       </a>
     </li>
+    <li>
+      <a (click)="onHome()">
+        <i class="bx bxs-id-card"></i>
+        <span class="list_item">Customers</span>
+      </a>
+    </li>
+    <div class="btn">
+      <a (click)="onButton()">
+        <i class="bx bxs-caret-right-circle"></i>
+      </a>
+    </div>
   </ul>
 </div>
