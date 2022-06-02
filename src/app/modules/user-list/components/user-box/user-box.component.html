@@ -1,3 +1,19 @@
-<div>
-  <p>{{ user.id }}</p>
+<div class="userBox">
+  <div class="img">
+    <img
+      src="https://thumbs.dreamstime.com/b/male-avatar-icon-flat-style-male-user-icon-cartoon-man-avatar-vector-stock-91602499.jpg"
+      alt="User Image"
+      *ngIf="user.gender === 'male'"
+    />
+    <img
+      src="https://thumbs.dreamstime.com/b/female-avatar-icon-flat-style-female-user-icon-cartoon-woman-vector-stock-91462850.jpg"
+      alt="User Image"
+      *ngIf="user.gender === 'female'"
+    />
+  </div>
+  <div class="details">
+    <div class="name">{{ user.name }}</div>
+    <div class="gender">{{ user.gender }}</div>
+    <div class="status">{{ user.status }}</div>
+  </div>
 </div>

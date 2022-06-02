@@ -1,4 +1,13 @@
-<header>
-  <app-header></app-header>
-</header>
-<main><app-navigation></app-navigation> <router-outlet></router-outlet></main>
+<div class="app">
+  <nav>
+    <app-navigation></app-navigation>
+  </nav>
+  <div class="main">
+    <header>
+      <app-header></app-header>
+    </header>
+    <main>
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>

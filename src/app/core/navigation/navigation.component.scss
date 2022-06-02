@@ -1,0 +1,61 @@
+.nav {
+  height: 100%;
+  width: 15em;
+  background-color: var(--primary);
+
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    padding: 1em 0 2em 0;
+    font-weight: 600;
+    color: white;
+  }
+
+  .list li {
+    position: relative;
+    width: 80%;
+    height: 2em;
+    line-height: 1em;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0em 0em 0.5em 1.3em;
+    transition: 0.2s ease;
+  }
+
+  .list li a {
+    font-size: 1.3em;
+    color: rgba(225, 232, 234, 0.3);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    cursor: pointer;
+  }
+
+  .list li a span {
+    margin-left: 0.5em;
+  }
+
+  .list li:hover {
+    background-color: white;
+    border-radius: 0.2em;
+    a {
+      color: var(--primary);
+    }
+  }
+
+  .list li:active {
+    height: 2.3em;
+  }
+}
+
+.btn {
+  margin: 2em 0em 0em 1.7em;
+}
+
+.btn a {
+  font-size: 2em;
+  i {
+    color: white;
+  }
+}

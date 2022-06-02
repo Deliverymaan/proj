@@ -1,3 +1,31 @@
-<div>
-  <app-user-box *ngFor="let userEl of users" [user]="userEl"></app-user-box>
+<div class="container">
+  <div class="params">
+    <div class="left">
+      <div class="search">
+        <input type="text" placeholder="Search" />
+        <button type="button">
+          <i class="bx bx-search"></i>
+        </button>
+      </div>
+      <div class="options">
+        <select>
+          <option value="">Filter By Parameters:</option>
+          <option value="name">by Name</option>
+          <option value="gender">by Gender</option>
+          <option value="status">by Status</option>
+        </select>
+      </div>
+      <div class="addFilter">
+        <i class="bx bx-plus"></i>
+        <span>Add Filter</span>
+      </div>
+    </div>
+    <div class="right">
+      <div class="add"></div>
+    </div>
+  </div>
+
+  <div class="allBoxes">
+    <app-user-box *ngFor="let userEl of users" [user]="userEl"></app-user-box>
+  </div>
 </div>

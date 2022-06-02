@@ -1,0 +1,38 @@
+.userBox {
+  background-color: white;
+  width: 18em;
+  height: 5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1em;
+  border-radius: 0.2em;
+  box-shadow: 1px 1px 7px #e6eaee;
+  font-size: 1em;
+  .img {
+    margin: 0.5em;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .details {
+    width: 100%;
+    text-align: start;
+    margin: 0.5em 0.5em 0.5em 0;
+    font-size: 0.8em;
+    color: var(--primary);
+    .name {
+      font-weight: 600;
+      margin: 0.2em;
+    }
+    .gender {
+      color: var(--fourth);
+      margin: 0.2em;
+    }
+    .status {
+      margin: 0.2em;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--third);
+}
+
+.allBoxes {
+  background-color: var(--third);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.params {
+  padding: 2.5em 1em 1em 1.5em;
+}
+
+.left {
+  width: 50%;
+  display: flex;
+
+  .search input {
+    height: 2em;
+    width: 9em;
+    border-radius: 0.4em;
+    border-color: var(--secondary);
+  }
+
+  .search input:hover {
+    background-color: rgba(218, 218, 218, 0.3);
+  }
+
+  .search button {
+    height: 2.3em;
+    background-color: var(--five);
+    border: none;
+    margin: 0em 1.5em 0em 0.2em;
+    width: 5em;
+    border-radius: 0.2em;
+    i {
+      color: white;
+      padding-top: 0.2em;
+    }
+  }
+  .search button:hover {
+    background-color: #179652;
+  }
+
+  .options select {
+    height: 2.4em;
+    margin: 0em 1em 1em 0em;
+    border: 0.5px solid rgba(226, 229, 228);
+    background-color: white;
+    border-radius: 0.2em;
+    padding: 0em 0.5em 0em 0.5em;
+    option {
+      font-size: 0.7rem;
+    }
+  }
+
+  .options select:hover {
+    background-color: rgba(218, 218, 218, 0.3);
+  }
+
+  .addFilter {
+    background-color: white;
+    height: 1.9em;
+    padding: 0em 1em;
+    display: flex;
+    flex-direction: row;
+    border-radius: 0.2em;
+    align-items: center;
+    border: 0.5px solid rgba(226, 229, 228);
+    span {
+      font-size: 0.9em;
+    }
+  }
+
+  .addFilter:hover {
+    background-color: rgba(218, 218, 218, 0.3);
+  }
+}

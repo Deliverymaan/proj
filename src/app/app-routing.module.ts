@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/users', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 
   {
     path: 'users',
@@ -10,6 +10,19 @@ const routes: Routes = [
       import('./modules/user-list/user-list.module').then(
         (p) => p.UserListModule
       ),
+  },
+  {
+    path: 'create-user',
+    loadChildren: () =>
+      import('./modules/create-user/create-user.module').then(
+        (p) => p.CreateUserModule
+      ),
+  },
+
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./modules/home/home.module').then((p) => p.HomeModule),
   },
 ];
 
