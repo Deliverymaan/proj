@@ -1,1 +1,73 @@
-<p>create-user works!</p>
+<div class="container">
+  <form class="form" [formGroup]="userForm">
+    <h1>Image Upload?</h1>
+    <div class="field">
+      <label for="name">Name</label> <br />
+      <input type="text" id="name" [formControlName]="'name'" />
+    </div>
+    <div class="field">
+      <label for="email">Email</label> <br />
+      <input type="text" id="email" [formControlName]="'email'" />
+    </div>
+    <div class="field">
+      <label for="password">Password</label> <br />
+      <input type="password" id="password" [formControlName]="'password'" />
+    </div>
+    <div class="field">
+      <label for="address">Address</label> <br />
+      <input type="address" id="address" [formControlName]="'address'" />
+    </div>
+    <div class="field">
+      <label for="gender">Gender</label>
+      <div class="radio">
+        <div class="inputRadio">
+          <input
+            type="radio"
+            value="male"
+            name="gender"
+            id="male"
+            [formControlName]="'gender'"
+          />
+          <label for="male" class="val">Male</label>
+        </div>
+        <div class="inputRadio">
+          <input
+            type="radio"
+            value="female"
+            name="gender"
+            id="female"
+            [formControlName]="'gender'"
+          />
+          <label for="female" class="val">Female</label>
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label for="status">Status</label>
+      <div class="radio">
+        <div class="inputRadio">
+          <input
+            type="radio"
+            value="active"
+            name="status"
+            id="active"
+            [formControlName]="'status'"
+          />
+          <label for="active" class="val">Active</label>
+        </div>
+        <div class="inputRadio">
+          <input
+            type="radio"
+            value="inactive"
+            name="status"
+            id="inactive"
+            [formControlName]="'status'"
+          />
+          <label for="inactive" class="val">Inactive</label>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="btn">Submit</button>
+  </form>
+</div>
