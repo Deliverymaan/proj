@@ -21,9 +21,7 @@ export class UserListComponent implements OnInit {
   logUserList() {
     this._userListService
       .getUserList()
-      .subscribe(
-        (result: any) => ((this.users = result), console.log(this.users))
-      );
+      .subscribe((result: any) => (this.users = result));
   }
 
   onAdd() {

@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -10,7 +11,13 @@ export class UserListService {
 
   public getUserList() {
     const userPath = '/public/v2/users';
-
-    return this._http.get(`${environment.apiurl}${userPath}`);
+    const headers = new HttpHeaders({
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      'X-Pagination-Limit': '12',
+    });
+    return this._http.get(`${environment.apiurl}${userPath}`, {
+      headers: headers,
+    });
   }
 }

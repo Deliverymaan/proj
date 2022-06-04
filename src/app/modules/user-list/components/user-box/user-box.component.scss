@@ -7,7 +7,7 @@
   justify-content: flex-start;
   align-items: center;
   margin: 1em;
-  border-radius: 1.5em;
+  border-radius: 0.3em;
   box-shadow: 1px 1px 7px #e6eaee;
   font-size: 1em;
   .img {
@@ -27,8 +27,13 @@
       font-weight: 600;
       margin: 0.2em;
     }
-    .gender {
+    .genderMale {
       margin: 0.2em;
+      color: #eedc42;
+    }
+    .genderFemale {
+      margin: 0.2em;
+      color: #a7d6eb;
     }
     .status {
       margin: 0.2em;

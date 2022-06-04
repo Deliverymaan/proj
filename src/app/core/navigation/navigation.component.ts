@@ -10,9 +10,7 @@ export class NavigationComponent implements OnInit {
   constructor(private _router: Router) {}
   @ViewChild('nav', { static: true }) nav!: ElementRef;
 
-  ngOnInit(): void {
-    console.log(this.nav);
-  }
+  ngOnInit(): void {}
 
   onEmployee() {
     this._router.navigate(['/users']);

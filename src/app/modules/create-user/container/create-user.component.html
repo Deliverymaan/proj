@@ -1,22 +1,53 @@
 <div class="container">
-  <form class="form" [formGroup]="userForm">
+  <form class="form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <h1>Image Upload?</h1>
     <div class="field">
-      <label for="name">Name</label> <br />
-      <input type="text" id="name" [formControlName]="'name'" />
+      <label for="name">Name </label>
+      <br />
+      <input type="text" id="name" [formControlName]="'name'" /> <br />
+      <sup
+        *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched"
+        >* Invalid Name
+      </sup>
+    </div>
+    <div class="field">
+      <label for="id">ID</label>
+      <br />
+      <input type="text" id="id" [formControlName]="'id'" /> <br />
+      <sup *ngIf="userForm.get('id')?.invalid && userForm.get('id')?.touched"
+        >* Invalid Name
+      </sup>
     </div>
     <div class="field">
       <label for="email">Email</label> <br />
-      <input type="text" id="email" [formControlName]="'email'" />
+      <input type="text" id="email" [formControlName]="'email'" /> <br />
+      <sup
+        *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched"
+        >* Invalid Email
+      </sup>
     </div>
-    <div class="field">
+
+    <!-- <div class="field">
       <label for="password">Password</label> <br />
       <input type="password" id="password" [formControlName]="'password'" />
-    </div>
-    <div class="field">
+      <br />
+      <sup
+        *ngIf="
+          userForm.get('password')?.invalid && userForm.get('password')?.touched
+        "
+        >* Invalid Password
+      </sup>
+    </div> -->
+    <!-- <div class="field">
       <label for="address">Address</label> <br />
-      <input type="address" id="address" [formControlName]="'address'" />
-    </div>
+      <input type="address" id="address" [formControlName]="'address'" /> <br />
+      <sup
+        *ngIf="
+          userForm.get('address')?.invalid && userForm.get('address')?.touched
+        "
+        >* Invalid Address
+      </sup>
+    </div> -->
     <div class="field">
       <label for="gender">Gender</label>
       <div class="radio">
@@ -67,7 +98,10 @@
         </div>
       </div>
     </div>
-
-    <button type="button" class="btn">Submit</button>
+    <sup *ngIf="userForm.invalid && userForm.touched" style="color: red"
+      >Invalid Form
+    </sup>
+    <br />
+    <button type="submit" class="btn">Submit</button>
   </form>
 </div>
