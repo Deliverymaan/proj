@@ -25,12 +25,15 @@ export class AuthTokenInterceptor implements HttpInterceptor {
       },
     });
     this._loadServ.startApi();
-    return next.handle(reqWithAuth).pipe(
-      tap((event) => {
-        if (event instanceof HttpResponse) {
-          this._loadServ.stopApi();
-        }
-      })
-    );
+    return next
+      .handle(reqWithAuth)
+
+      .pipe(
+        tap((event) => {
+          if (event instanceof HttpResponse) {
+            this._loadServ.stopApi();
+          }
+        })
+      );
   }
 }
