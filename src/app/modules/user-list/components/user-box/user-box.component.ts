@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { pipe } from 'rxjs';
 import { UserModel } from 'src/app/shared/models/user.model';
 
 @Component({
