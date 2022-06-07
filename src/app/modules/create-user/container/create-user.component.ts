@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoaderService } from 'app/shared/loader/service/loader.service';
-import { NotificationType } from 'app/shared/notifications/models/notification-type.enum';
-import { NotificationFacade } from 'app/shared/notifications/notification.facade';
 import { NotificationState } from 'app/shared/notifications/state/notification.state';
 import { CreateUserService } from '../api/create-user.service';
 
@@ -37,6 +35,7 @@ export class CreateUserComponent implements OnInit {
       gender: new FormControl(null, Validators.required),
       status: new FormControl(null, Validators.required),
     });
+    this._state.notifySuccess('Success', this.result);
   }
   onSubmit() {
     if (this.userForm.valid) {

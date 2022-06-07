@@ -10,7 +10,9 @@ import { NotificationType } from '../models/notification-type.enum';
 })
 export class NotificationsComponent implements OnInit {
   notifications: NotificationModel[] = [];
+
   constructor(private _state: NotificationState) {}
+
   ngOnInit(): void {
     this._state.getNotifications$().subscribe((notify: NotificationModel) => {
       this.notifications = [];
@@ -19,21 +21,9 @@ export class NotificationsComponent implements OnInit {
         return;
       }
       this.notifications.push(notify);
-      setTimeout(() => {
-        this.notifications = this.notifications.filter((not) => not !== notify);
-      }, 4000);
+      // setTimeout(() => {
+      //   this.notifications = this.notifications.filter((not) => not !== notify);
+      // }, 4000);
     });
-  }
-
-  cssClass(notification: NotificationModel) {
-    if (!notification) {
-      return;
-    }
-    switch (notification.type) {
-      case NotificationType.success:
-        return 'toast-success';
-      case NotificationType.error:
-        return 'toast-error';
-    }
   }
 }
