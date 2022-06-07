@@ -8,6 +8,7 @@ import { UserListService } from '../../api/user-list.service';
   styleUrls: ['./user-list.component.scss'],
 })
 export class UserListComponent implements OnInit {
+  filtered = '';
   constructor(
     private _userListService: UserListService,
     private _router: Router

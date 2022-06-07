@@ -1,4 +1,4 @@
-<div class="container" *ngFor="let notify of notifications">
+<div id="container" *ngFor="let notify of notifications">
   <div class="notification" ngClass="{{ notify.type }}">
     <div *ngIf="notify.type === 'success'">
       <i class="bx bxs-check-circle"></i>

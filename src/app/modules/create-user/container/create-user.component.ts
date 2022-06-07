@@ -35,7 +35,6 @@ export class CreateUserComponent implements OnInit {
       gender: new FormControl(null, Validators.required),
       status: new FormControl(null, Validators.required),
     });
-    this._state.notifySuccess('Success', this.result);
   }
   onSubmit() {
     if (this.userForm.valid) {

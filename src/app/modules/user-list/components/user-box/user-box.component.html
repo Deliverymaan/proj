@@ -14,11 +14,11 @@
   <div class="details">
     <div class="name">{{ user.name }}</div>
     <div class="genderMale" *ngIf="user.gender === 'male'">
-      {{ user.gender }}
+      {{ user.gender | startupper }}
     </div>
     <div class="genderFemale" *ngIf="user.gender === 'female'">
-      {{ user.gender }}
+      {{ user.gender | startupper }}
     </div>
-    <div class="status">{{ user.status }}</div>
+    <div class="status">{{ user.status | startupper }}</div>
   </div>
 </div>

@@ -21,9 +21,9 @@ export class NotificationsComponent implements OnInit {
         return;
       }
       this.notifications.push(notify);
-      // setTimeout(() => {
-      //   this.notifications = this.notifications.filter((not) => not !== notify);
-      // }, 4000);
+      setTimeout(() => {
+        this.notifications = this.notifications.filter((not) => not !== notify);
+      }, 4000);
     });
   }
 }

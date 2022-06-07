@@ -9,7 +9,7 @@ export class UserListService {
   constructor(private _http: HttpClient) {}
 
   public getUserList() {
-    const userPath = '/public/v2/users';
+    const userPath = '/public/v2/users?page=4';
     const headers = new HttpHeaders({
       Accept: 'application/json',
       'Content-Type': 'application/json',

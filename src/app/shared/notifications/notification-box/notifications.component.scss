@@ -1,7 +1,7 @@
-.container {
+#container {
   position: fixed;
   top: 5em;
-  right: 2em;
+  right: 3em;
   width: 9em;
   height: 4em;
   background-color: white;
@@ -11,25 +11,44 @@
   align-items: center;
   border-radius: 1em;
   box-shadow: 1px 1px 7px #e6eaee;
-  .notification div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+}
+.notification div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .notification.success {
-    color: green;
-  }
+.notification.success {
+  color: green;
+}
 
-  .notification.error {
-    color: red;
-  }
+.notification.error {
+  color: red;
+}
 
-  .notification div i {
-    font-size: 2em;
-  }
+.notification div i {
+  font-size: 2em;
+}
 
-  .notification div span {
-    margin-left: 0.3em;
+.notification div span {
+  margin-left: 0.3em;
+}
+
+//Animation
+#container {
+  right: -10em;
+  animation: slide 1.2s ease forwards;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(-13em);
+  }
+  100% {
+    transform: translateX(-12.5em);
+    opacity: 1;
   }
 }
