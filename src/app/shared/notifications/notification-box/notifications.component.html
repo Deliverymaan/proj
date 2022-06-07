@@ -1,0 +1,17 @@
+<!-- <div class="container" *ngFor="let notify of notifications$">
+  <div class="notification" ngClass="{{ notify.type }}">
+    {{ notify.status }}
+    {{ notify.message }}
+  </div>
+</div> -->
+<div
+  id="toast-container"
+  class="toast-top-right"
+  *ngFor="let item of notifications"
+>
+  <div class="toast {{ cssClass(item) }}" style="display: block">
+    <div class="toast-message">
+      Info: {{ item.message }} Status: {{ item.status }}
+    </div>
+  </div>
+</div>

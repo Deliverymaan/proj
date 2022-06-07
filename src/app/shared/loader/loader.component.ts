@@ -21,7 +21,6 @@ export class LoaderComponent implements OnInit {
     this._load.getLoader().subscribe((result: string) => {
       this.loader = result === 'start';
       this._detect.detectChanges();
-      console.log(this.loader);
     });
   }
 }

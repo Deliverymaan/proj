@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthTokenInterceptor } from './shared/interceptors/auth-token.interceptor';
-import { NotificationsComponent } from './shared/notifications/notifications.component';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { NotificationModule } from './shared/notifications/notification.module';
 
 @NgModule({
-  declarations: [AppComponent, NotificationsComponent, LoaderComponent],
-  imports: [BrowserModule, AppRoutingModule, CoreModule, HttpClientModule],
+  declarations: [AppComponent, LoaderComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CoreModule,
+    HttpClientModule,
+    NotificationModule,
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
