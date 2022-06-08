@@ -123,6 +123,35 @@ table {
   border-spacing: 0;
 }
 
+* {
+  font-family: "Encode-Light", sans-serif;
+}
+
+//Encode fonts
+@font-face {
+  font-family: "Encode-Thin";
+  src: url("assets/fonts/Encode-fonts/EncodeSans-Thin.ttf");
+}
+@font-face {
+  font-family: "Encode-Light";
+  src: url("assets/fonts/Encode-fonts/EncodeSans-Light.ttf");
+}
+@font-face {
+  font-family: "Encode-Medium";
+  src: url("assets/fonts/Encode-fonts/EncodeSans-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Encode-Bold";
+  src: url("assets/fonts/Encode-fonts/EncodeSans-Bold.ttf");
+}
+
+//Lobster fonts
+@font-face {
+  font-family: "Lobster";
+  src: url("assets/fonts/Lobster-fonts/Lobster-Regular.ttf");
+}
+
 :root {
   --first: #032028;
   --second: #1ac168;

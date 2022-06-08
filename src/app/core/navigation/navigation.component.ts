@@ -23,4 +23,8 @@ export class NavigationComponent implements OnInit {
   onButton() {
     this.nav.nativeElement.classList.toggle('active');
   }
+
+  isActive() {
+    this.nav.nativeElement.classList === 'nav active';
+  }
 }

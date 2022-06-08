@@ -1,6 +1,12 @@
 <div class="container">
   <form class="form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
-    <h1>Image Upload?</h1>
+    <div class="imageField">
+      <input type="file" /> <br />
+      <sup
+        *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched"
+        >* Invalid Image
+      </sup>
+    </div>
     <div class="field">
       <label for="name">Name </label>
       <br />

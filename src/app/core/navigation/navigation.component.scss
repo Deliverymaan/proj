@@ -27,6 +27,12 @@
   .btn {
     left: 0;
     transition: 0.8s ease;
+    a i {
+      transform: rotate(-180deg);
+      &:active {
+        transform: rotate(0deg);
+      }
+    }
   }
 }
 
@@ -66,6 +72,7 @@
   opacity: 0;
   transition: 0.5s ease;
   padding: 0.5em 0em 1em 0em;
+  font-family: "Encode-Bold", sans-serif;
 }
 
 .list li {
@@ -119,7 +126,10 @@
   font-size: 2em;
   i {
     color: white;
-    transition: 0.4s ease;
+    transition: 0.5s ease;
+    &:active {
+      transform: rotate(-180deg);
+    }
     &:hover {
       color: var(--second);
     }
