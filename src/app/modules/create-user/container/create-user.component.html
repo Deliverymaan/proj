@@ -1,10 +1,16 @@
 <div class="container">
   <form class="form" [formGroup]="userForm" (ngSubmit)="onSubmit()">
     <div class="imageField">
-      <input type="file" /> <br />
+      <input
+        type="file"
+        id="image"
+        [formControlName]="'image'"
+        accept=".png, .jpg, .svg"
+      />
+      <br />
       <sup
-        *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched"
-        >* Invalid Image
+        *ngIf="userForm.get('image')?.invalid && userForm.get('image')?.touched"
+        >* Image type must be png or jpeg.
       </sup>
     </div>
     <div class="field">
@@ -13,7 +19,7 @@
       <input type="text" id="name" [formControlName]="'name'" /> <br />
       <sup
         *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched"
-        >* Invalid Name
+        >* Name must be at least 4 characters.
       </sup>
     </div>
     <div class="field">
@@ -21,7 +27,7 @@
       <br />
       <input type="text" id="id" [formControlName]="'id'" /> <br />
       <sup *ngIf="userForm.get('id')?.invalid && userForm.get('id')?.touched"
-        >* Invalid Name
+        >* ID must be 4 numeric characters.
       </sup>
     </div>
     <div class="field">
@@ -29,7 +35,7 @@
       <input type="text" id="email" [formControlName]="'email'" /> <br />
       <sup
         *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched"
-        >* Invalid Email
+        >* Email must be properly formatted type.
       </sup>
     </div>
     <div class="field">

@@ -20,6 +20,7 @@ export class CreateUserComponent implements OnInit {
 
   ngOnInit(): void {
     this.userForm = new FormGroup({
+      image: new FormControl(null),
       name: new FormControl(undefined, [
         Validators.required,
         Validators.pattern('^[a-z]*$'),
