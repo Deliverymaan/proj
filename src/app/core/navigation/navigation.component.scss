@@ -31,9 +31,10 @@
 }
 
 .nav {
+  box-shadow: 1px 1px 7px var(--shadow-light);
   height: 100%;
   width: 4em;
-  background-color: var(--primary);
+  background-color: var(--first);
   transition: 1s ease;
   display: flex;
   flex-direction: column;
@@ -51,12 +52,11 @@
   color: white;
   margin: 0.5em 0em 0em 0.15em;
   transition: 2s ease;
+  &:hover {
+    transition: 0.5s ease;
+    color: var(--second);
+  }
 }
-.bxs-car-mechanic:hover {
-  transition: 0.5s ease;
-  color: var(--five);
-}
-
 .header h1 {
   font-size: 2em;
   text-align: center;
@@ -78,17 +78,16 @@
   margin: 0em 0em 0.5em 1.3em;
   transition: 0.8s ease;
   left: -15%;
-}
+  &:hover {
+    background-color: white;
+    border-radius: 0.2em;
 
-.list li:hover {
-  background-color: white;
-  border-radius: 0.2em;
-
-  a {
-    color: var(--primary);
-  }
-  i {
-    color: var(--five);
+    a {
+      color: var(--first);
+    }
+    i {
+      color: var(--second);
+    }
   }
 }
 
@@ -121,9 +120,8 @@
   i {
     color: white;
     transition: 0.4s ease;
+    &:hover {
+      color: var(--second);
+    }
   }
-}
-
-.btn a i:hover {
-  color: var(--five);
 }

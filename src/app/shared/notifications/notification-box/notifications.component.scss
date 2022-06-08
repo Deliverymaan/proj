@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 1em;
-  box-shadow: 1px 1px 7px #e6eaee;
+  box-shadow: 1px 1px 7px var(--shadow);
 }
 .notification div {
   display: flex;
@@ -19,11 +19,11 @@
 }
 
 .notification.success {
-  color: green;
+  color: var(--second);
 }
 
 .notification.error {
-  color: red;
+  color: var(--fourth);
 }
 
 .notification div i {
